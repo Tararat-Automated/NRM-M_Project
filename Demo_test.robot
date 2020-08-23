@@ -14,12 +14,15 @@ ${APP_PACKAGE}    com.onionshack.projectdemo
 ${APP_ACTIVITY}       com.onionshack.projectdemo.MainActivity
 ${txtbutton}     xpath=//android.widget.Button[contains(@resource-id,'btnTest')]    #id=com.onionshack.projectdemo:id/btnTest
 ${txtDtac}     DTAC
+${PLATFORM}     ${ar_OS}
 
 *** Keywords ***
-Open App
-     # Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
-     #  ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
+Android Open app
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+
+iOS Open App     
+     Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
+      ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
 
 Verify text button
      Element Text Should Be      ${txtbutton}      ${txtDtac}
@@ -28,8 +31,12 @@ Close All Apps
      Capture Page Screenshot
      Close All Applications
 
+Open App 
+     Run Keyword If    "${PLATFORM}"=="Android"    Android Open app
+     ...    ELSE IF     "${PLATFORM}"=="iOS"   iOS Open App
+
 *** Test Cases ***
 test_demo
-     Open App
+     Open App 
      Verify text button
      Close All Apps

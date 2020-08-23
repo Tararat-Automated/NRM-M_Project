@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20200823 21:46:52.279" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
-<suite source="/Users/tararatwongsansee/Desktop/Demo_test.robot" id="s1" name="Demo test">
+<robot generated="20200823 22:35:08.512" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<suite source="/Users/tararatwongsansee/NRM-M_Project/Demo_test.robot" id="s1" name="Demo test">
 <test id="s1-t1" name="test_demo">
 <kw name="Open App">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${PLATFORM}"=="Android"</arg>
+<arg>Android Open app</arg>
+<arg>ELSE IF</arg>
+<arg>"${PLATFORM}"=="iOS"</arg>
+<arg>iOS Open App</arg>
+</arguments>
+<kw name="Android Open app">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.</doc>
 <arguments>
@@ -13,9 +23,13 @@
 <arg>appPackage=${APP_PACKAGE}</arg>
 <arg>appActivity=${APP_ACTIVITY}</arg>
 </arguments>
-<status status="PASS" endtime="20200823 21:47:04.581" starttime="20200823 21:46:52.427"></status>
+<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.837"></status>
 </kw>
-<status status="PASS" endtime="20200823 21:47:04.582" starttime="20200823 21:46:52.427"></status>
+<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.837"></status>
+</kw>
+<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.836"></status>
+</kw>
+<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.836"></status>
 </kw>
 <kw name="Verify text button">
 <kw name="Element Text Should Be" library="AppiumLibrary">
@@ -24,26 +38,26 @@
 <arg>${txtbutton}</arg>
 <arg>${txtDtac}</arg>
 </arguments>
-<msg timestamp="20200823 21:47:04.583" level="INFO">Verifying element 'xpath=//android.widget.Button[contains(@resource-id,'btnTest')]' contains exactly text 'DTAC'.</msg>
-<status status="PASS" endtime="20200823 21:47:05.853" starttime="20200823 21:47:04.583"></status>
+<msg timestamp="20200823 22:35:20.288" level="INFO">Verifying element 'xpath=//android.widget.Button[contains(@resource-id,'btnTest')]' contains exactly text 'DTAC'.</msg>
+<status status="PASS" endtime="20200823 22:35:21.473" starttime="20200823 22:35:20.287"></status>
 </kw>
-<status status="PASS" endtime="20200823 21:47:05.854" starttime="20200823 21:47:04.582"></status>
+<status status="PASS" endtime="20200823 22:35:21.473" starttime="20200823 22:35:20.287"></status>
 </kw>
 <kw name="Close All Apps">
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200823 21:47:06.436" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20200823 21:47:06.436" starttime="20200823 21:47:05.854"></status>
+<msg timestamp="20200823 22:35:22.001" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200823 22:35:22.001" starttime="20200823 22:35:21.474"></status>
 </kw>
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" endtime="20200823 21:47:06.676" starttime="20200823 21:47:06.436"></status>
+<status status="PASS" endtime="20200823 22:35:22.251" starttime="20200823 22:35:22.002"></status>
 </kw>
-<status status="PASS" endtime="20200823 21:47:06.677" starttime="20200823 21:47:05.854"></status>
+<status status="PASS" endtime="20200823 22:35:22.252" starttime="20200823 22:35:21.474"></status>
 </kw>
-<status status="PASS" endtime="20200823 21:47:06.677" critical="yes" starttime="20200823 21:46:52.426"></status>
+<status status="PASS" endtime="20200823 22:35:22.252" critical="yes" starttime="20200823 22:35:08.836"></status>
 </test>
-<status status="PASS" endtime="20200823 21:47:06.678" starttime="20200823 21:46:52.282"></status>
+<status status="PASS" endtime="20200823 22:35:22.253" starttime="20200823 22:35:08.515"></status>
 </suite>
 <statistics>
 <total>
