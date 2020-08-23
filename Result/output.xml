@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20200823 21:46:52.279" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<suite source="/Users/tararatwongsansee/Desktop/Demo_test.robot" id="s1" name="Demo test">
+<test id="s1-t1" name="test_demo">
+<kw name="Open App">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+</arguments>
+<status status="PASS" endtime="20200823 21:47:04.581" starttime="20200823 21:46:52.427"></status>
+</kw>
+<status status="PASS" endtime="20200823 21:47:04.582" starttime="20200823 21:46:52.427"></status>
+</kw>
+<kw name="Verify text button">
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<arguments>
+<arg>${txtbutton}</arg>
+<arg>${txtDtac}</arg>
+</arguments>
+<msg timestamp="20200823 21:47:04.583" level="INFO">Verifying element 'xpath=//android.widget.Button[contains(@resource-id,'btnTest')]' contains exactly text 'DTAC'.</msg>
+<status status="PASS" endtime="20200823 21:47:05.853" starttime="20200823 21:47:04.583"></status>
+</kw>
+<status status="PASS" endtime="20200823 21:47:05.854" starttime="20200823 21:47:04.582"></status>
+</kw>
+<kw name="Close All Apps">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200823 21:47:06.436" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200823 21:47:06.436" starttime="20200823 21:47:05.854"></status>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" endtime="20200823 21:47:06.676" starttime="20200823 21:47:06.436"></status>
+</kw>
+<status status="PASS" endtime="20200823 21:47:06.677" starttime="20200823 21:47:05.854"></status>
+</kw>
+<status status="PASS" endtime="20200823 21:47:06.677" critical="yes" starttime="20200823 21:46:52.426"></status>
+</test>
+<status status="PASS" endtime="20200823 21:47:06.678" starttime="20200823 21:46:52.282"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo test" pass="1">Demo test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
