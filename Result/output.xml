@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20200823 22:35:08.512" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<robot generated="20200823 23:38:31.623" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
 <suite source="/Users/tararatwongsansee/NRM-M_Project/Demo_test.robot" id="s1" name="Demo test">
 <test id="s1-t1" name="test_demo">
 <kw name="Open App">
@@ -12,64 +12,49 @@
 <arg>"${PLATFORM}"=="iOS"</arg>
 <arg>iOS Open App</arg>
 </arguments>
-<kw name="Android Open app">
+<kw name="iOS Open App">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.</doc>
 <arguments>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
-<arg>deviceName=${DEVICE_NAME}</arg>
-<arg>appPackage=${APP_PACKAGE}</arg>
-<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>platformVersion=13.5</arg>
+<arg>deviceName=iPhone 8</arg>
+<arg>app=${APP_LOCATION}</arg>
 </arguments>
-<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.837"></status>
-</kw>
-<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.837"></status>
-</kw>
-<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.836"></status>
-</kw>
-<status status="PASS" endtime="20200823 22:35:20.286" starttime="20200823 22:35:08.836"></status>
-</kw>
-<kw name="Verify text button">
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<arguments>
-<arg>${txtbutton}</arg>
-<arg>${txtDtac}</arg>
-</arguments>
-<msg timestamp="20200823 22:35:20.288" level="INFO">Verifying element 'xpath=//android.widget.Button[contains(@resource-id,'btnTest')]' contains exactly text 'DTAC'.</msg>
-<status status="PASS" endtime="20200823 22:35:21.473" starttime="20200823 22:35:20.287"></status>
-</kw>
-<status status="PASS" endtime="20200823 22:35:21.473" starttime="20200823 22:35:20.287"></status>
-</kw>
-<kw name="Close All Apps">
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200823 22:35:22.001" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20200823 22:35:22.001" starttime="20200823 22:35:21.474"></status>
+<msg timestamp="20200823 23:38:31.816" level="FAIL">No application is open</msg>
+<status status="FAIL" endtime="20200823 23:38:31.817" starttime="20200823 23:38:31.813"></status>
 </kw>
-<kw name="Close All Applications" library="AppiumLibrary">
-<doc>Closes all open applications.</doc>
-<status status="PASS" endtime="20200823 22:35:22.251" starttime="20200823 22:35:22.002"></status>
+<msg timestamp="20200823 23:38:31.817" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20200823 23:38:31.819" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: New app path '/Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/ProjectDemo-gpsiifkdlcoevefdnzzsvuqgxaig/Build/Products/Debug-iphonesimulator/ProjectDemo.app' did not have extension(s) '.apk,.apks'
+</msg>
+<status status="FAIL" endtime="20200823 23:38:31.819" starttime="20200823 23:38:31.769"></status>
 </kw>
-<status status="PASS" endtime="20200823 22:35:22.252" starttime="20200823 22:35:21.474"></status>
+<status status="FAIL" endtime="20200823 23:38:31.820" starttime="20200823 23:38:31.768"></status>
 </kw>
-<status status="PASS" endtime="20200823 22:35:22.252" critical="yes" starttime="20200823 22:35:08.836"></status>
+<status status="FAIL" endtime="20200823 23:38:31.820" starttime="20200823 23:38:31.768"></status>
+</kw>
+<status status="FAIL" endtime="20200823 23:38:31.820" starttime="20200823 23:38:31.767"></status>
+</kw>
+<status status="FAIL" endtime="20200823 23:38:31.821" critical="yes" starttime="20200823 23:38:31.767">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: New app path '/Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/ProjectDemo-gpsiifkdlcoevefdnzzsvuqgxaig/Build/Products/Debug-iphonesimulator/ProjectDemo.app' did not have extension(s) '.apk,.apks'
+</status>
 </test>
-<status status="PASS" endtime="20200823 22:35:22.253" starttime="20200823 22:35:08.515"></status>
+<status status="FAIL" endtime="20200823 23:38:31.821" starttime="20200823 23:38:31.627"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Demo test" pass="1">Demo test</stat>
+<stat fail="1" id="s1" name="Demo test" pass="0">Demo test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20200823 23:38:31.817" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
