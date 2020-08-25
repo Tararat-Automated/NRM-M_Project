@@ -5,8 +5,8 @@ Resource         ../Poc_Dtac/Resource/PageKeywords/LoginwithFacebook_PageKeyword
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
 ${PLATFORM_NAME}    Android   #Android    #iOS
-${PLATFORM_VERSION}   8.0.0   #8.0.0   #12.4.8   #13.5
-${DEVICE_NAME}    Galaxy S7   #Galaxy S7  #iPhone 6_test
+${PLATFORM_VERSION}   9   #8.0.0   #12.4.8   #13.5
+${DEVICE_NAME}    emulator01   #Galaxy S7   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
 ${APP_LOCATION}    /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/ProjectDemo-gpsiifkdlcoevefdnzzsvuqgxaig/Build/Products/Debug-iphonesimulator/ProjectDemo.app
 ${BUNDLE_ID}         com.onionshack.ProjectDemo
