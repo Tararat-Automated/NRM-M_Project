@@ -1,6 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource         ../Poc_Dtac/Resource/PageKeywords/LoginwithFacebook_PageKeyword.robot
+
 
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
