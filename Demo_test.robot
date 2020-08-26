@@ -13,6 +13,7 @@ ${BUNDLE_ID}         com.onionshack.ProjectDemo
 ${APP_PACKAGE}    com.onionshack.projectdemo
 ${APP_ACTIVITY}       com.onionshack.projectdemo.MainActivity
 ${txtbutton}     xpath=//android.widget.Button[contains(@resource-id,'btnTest')]    #id=com.onionshack.projectdemo:id/btnTest
+${txtbutton_ios}      xpath=//XCUIElementTypeButton[@name="DTAC"]
 ${txtDtac}     DTAC
 ${PLATFORM}     ${ar_OS}
 
@@ -25,7 +26,8 @@ iOS Open App
       ...    deviceName=iPhone 8      app=${APP_LOCATION}     #automationName=appium   
 
 Verify text button
-     Element Text Should Be      ${txtbutton}      ${txtDtac}
+     Run Keyword If    "${PLATFORM}"=="Android"    Element Text Should Be      ${txtbutton}      ${txtDtac}
+     ...    ELSE IF     "${PLATFORM}"=="iOS"   Element Text Should Be      ${txtbutton_ios}      ${txtDtac}
 
 Close All Apps
      Capture Page Screenshot
