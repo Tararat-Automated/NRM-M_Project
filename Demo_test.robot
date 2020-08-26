@@ -3,7 +3,7 @@ Library           AppiumLibrary
 
 
 *** Variables ***
-${REMOTE_URL}     ${Porurl}   #http://localhost:4723/wd/hub      # URL to appium server
+${REMOTE_URL}     ${Porturl}   #http://localhost:4723/wd/hub      # URL to appium server
 #${PLATFORM_NAME}    iOS   #Android    #iOS
 ${PLATFORM_VERSION}   ${ar_pfversion}       #13.6   #8.0.0   #12.4.8   #13.5
 ${DEVICE_NAME}    ${ar_devicename}  #Galaxy S7   #Galaxy S7  #iPhone 6_test
