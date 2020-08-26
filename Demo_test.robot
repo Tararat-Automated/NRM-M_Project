@@ -5,8 +5,8 @@ Library           AppiumLibrary
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
 #${PLATFORM_NAME}    iOS   #Android    #iOS
-${PLATFORM_VERSION}   13.6   #8.0.0   #12.4.8   #13.5
-${DEVICE_NAME}    emulator01   #Galaxy S7   #Galaxy S7  #iPhone 6_test
+${PLATFORM_VERSION}   ${ar_pfversion}       #13.6   #8.0.0   #12.4.8   #13.5
+${DEVICE_NAME}    ${ar_devicename}  #Galaxy S7   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
 ${APP_LOCATION}     com.onionshack.ProjectIOS
 ${BUNDLE_ID}         com.onionshack.ProjectIOS
@@ -19,7 +19,7 @@ ${PLATFORM}     ${ar_OS}
 
 *** Keywords ***
 Android Open app
-     Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+     Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=${ar_pfversion}     deviceName=${ar_devicename}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
 
 iOS Open App     
      Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=13.6
