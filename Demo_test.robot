@@ -23,7 +23,7 @@ Android Open app
 
 iOS Open App     
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=13.5
-      ...    deviceName=iPhone 8      app=${APP_LOCATION}     #automationName=appium   
+      ...    deviceName=B13DAB82-673C-428E-87F1-24A31042DC0F      app=${APP_LOCATION}     #automationName=appium   
 
 Verify text button
      Run Keyword If    "${PLATFORM}"=="Android"    Element Text Should Be      ${txtbutton}      ${txtDtac}
