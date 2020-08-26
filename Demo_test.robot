@@ -8,7 +8,7 @@ ${PLATFORM_NAME}    Android   #Android    #iOS
 ${PLATFORM_VERSION}   9   #8.0.0   #12.4.8   #13.5
 ${DEVICE_NAME}    emulator01   #Galaxy S7   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
-${APP_LOCATION}    /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/ProjectDemo-gpsiifkdlcoevefdnzzsvuqgxaig/Build/Products/Debug-iphonesimulator/ProjectDemo.app
+${APP_LOCATION}    /Users/pearbum/Library/Developer/Xcode/DerivedData/ProjectIOS-fiahkhftkzvgyafsiwqihtzftugr/Build/Products/Debug-iphonesimulator/ProjectIOS.app
 ${BUNDLE_ID}         com.onionshack.ProjectDemo
 ${APP_PACKAGE}    com.onionshack.projectdemo
 ${APP_ACTIVITY}       com.onionshack.projectdemo.MainActivity
